@@ -2,28 +2,7 @@
 #include "file_writer.hpp"
 #include <iostream>
 
-bool validate_arguments(int argc, char *argv[])
-{
-    try
-    {
-        if (argc == 1)
-        {
-            throw std::runtime_error("file path is not passed by argument!");
-        }
-        else if (argc > 2)
-        {
-            throw std::runtime_error("more than 2 files are passed by argument!");
-        }
-    }
-    catch (const std::exception &e)
-    {
-        std::cout << "argument error : " << e.what() << std::endl;
-        std::cout << "usage : " << argv[0] << " <file_path> " << std::endl;
-        return false;
-    }
-
-    return true;
-}
+bool validate_arguments(int argc, char * argv[]);
 
 int main(int argc, char *argv[])
 {
@@ -80,4 +59,29 @@ int main(int argc, char *argv[])
         time_utils::sub(&end, &begin, &res);
         std::cout << "read elapse: " << time_utils::to_nsec(&res) << "ns" << std::endl;
     }
+}
+
+
+
+bool validate_arguments(int argc, char *argv[])
+{
+    try
+    {
+        if (argc == 1)
+        {
+            throw std::runtime_error("file path is not passed by argument!");
+        }
+        else if (argc > 2)
+        {
+            throw std::runtime_error("more than 2 files are passed by argument!");
+        }
+    }
+    catch (const std::exception &e)
+    {
+        std::cout << "argument error : " << e.what() << std::endl;
+        std::cout << "usage : " << argv[0] << " <file_path> " << std::endl;
+        return false;
+    }
+
+    return true;
 }

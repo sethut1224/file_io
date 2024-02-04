@@ -12,13 +12,17 @@ src/file_reader.cpp)
 add_library(file_writer
 src/file_writer.cpp)
 
-add_executable(${PROJECT_NAME}
+add_executable(file_io
 src/main.cpp)
 
 # set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 
-target_link_libraries(${PROJECT_NAME}
+target_link_libraries(file_io
 file_reader
 file_writer)
+
+install(TARGETS file_io
+        DESTINATION ${CMAKE_SOURCE_DIR}/bin
+)
 
 

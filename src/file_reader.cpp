@@ -6,7 +6,6 @@ FileReader::FileReader(const char *path, std::ios_base::openmode mode)
     stream_.open(file_path_, mode);
 }
 
-#include <iostream>
 void FileReader::file_read(std::string& buf)
 {
     // read_entire(buf);
