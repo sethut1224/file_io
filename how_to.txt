@@ -1,0 +1,36 @@
+#파일 설명
+build
+    - 빌드 결과물이 저장되는 디렉토리, 빌드 수행시 file_io 실행파일 생성
+include
+    - file_io.hpp
+        - ifstream, ofstream 을 통해 file read, write 를 수행할 수 있는 FileIO 클래스 선언부
+    - filesystem_utils.hpp
+        - c++17 의 std::filesystem 기능들을 손쉽게 사용할 수 있도록 한 wrapping 함수들의 선언부
+    - time_utils.hpp
+        - timespec 구조체를 기반으로 시간 측정을 손쉽게 할 수 있도록 한 함수 정의부
+
+src
+    - file_io.cpp, filesystem_utils.cpp
+        - include 에 작성된 내용의 정의부
+    - main.cpp
+        - file_io.cpp, filesyste_utils.cpp 을 사용한 간단한 기능 예시
+            open, read, write, copy, remove, exists, size, list_up 기능
+
+text_file1.txt
+    - main.cpp 예시에 필요한 text file, main function 의 #define 을 통해 경로 및 파일 이름 수정 필요
+
+
+#사용 방법
+
+src/main.cpp
+    - #define 으로 정의된 TEXT_FILE1, TEXT_FILE2 경로 설정
+
+$ cd build
+$ make clean
+$ cmake ..
+$ make
+--> file_io 실행파일 생성
+$ ./file_io
+    - open, read, write, copy, remove, exists, size, list_up 기능 수행
+
+

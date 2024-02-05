@@ -1,8 +1,8 @@
 #include "file_io.hpp"
 #include "filesystem_utils.hpp"
 
-#define TEXT_FILE1 "/home/taeho/file_io/text_file1.txt"
-#define TEXT_FILE2 "/home/taeho/file_io/text_file2.txt"
+#define TEXT_FILE1 "/home/taeho/file_io/text_file1.txt" //write 를 통해 생성할 파일 경로
+#define TEXT_FILE2 "/home/taeho/file_io/text_file2.txt" //TEXT_FILE1 의 copy 버전 및 remove 를 수행할 파일 경로
 
 int main()
 {
