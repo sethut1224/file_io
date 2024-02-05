@@ -1,4 +1,3 @@
 build/
 bin/
-.vscode
-test.txt
+.vscode/
