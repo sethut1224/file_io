@@ -9,13 +9,13 @@ namespace filesystem_utils
 
     void remove_all(const fs::path &path)
     {
-        uintmax_t n = fs::remove_all(path);
+        std::intmax_t n = fs::remove_all(path);
         // std::cout << "Delete " << n << " files or directories" << std::endl;
     }
 
     void remove(const fs::path &path)
     {
-        uintmax_t n =fs::remove(path);
+        std::uintmax_t n = fs::remove(path);
         // std::cout << "Delete " << n << " files or directories" << std::endl;
     }
 

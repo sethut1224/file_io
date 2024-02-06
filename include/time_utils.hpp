@@ -4,6 +4,7 @@
 
 #include <stdint.h>
 #include <time.h>
+#include <stdexcept>
 
 #define NSEC_PER_SEC 1000000000
 #define USEC_PER_SEC 1000000

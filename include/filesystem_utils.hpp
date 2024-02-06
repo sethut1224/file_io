@@ -43,15 +43,16 @@ namespace filesystem_utils
     void remove(const fs::path &path);
 
     void create_directories(const fs::path &path);
+    void list_up(const fs::path &path, bool recursive = true);
 
     const std::filesystem::file_time_type last_write_time(const fs::path &path);
     const std::uintmax_t size(const fs::path &path);
+    
     const bool exists(const fs::path &path);
 
     const fs::path current_path();
     const fs::path absolute_path(const fs::path &path);
     const fs::path canonical_path(const fs::path &path);
 
-    void list_up(const fs::path &path, bool recursive = true);
 }
 #endif

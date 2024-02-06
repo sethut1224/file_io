@@ -4,6 +4,7 @@
 #include <fstream>
 #include <filesystem>
 #include <string>
+#include <iostream>
 
 // #define READ_LINE_BY_LINE
 
@@ -20,15 +21,15 @@ public:
 
 public:
     FileIO() = default;
-    
-    void open_input_stream(const fs::path& path, std::ios_base::openmode mode = std::ios_base::in);
+
+    void open_input_stream(const fs::path &path, std::ios_base::openmode mode = std::ios_base::in);
     void open_input_stream(const char *path, std::ios_base::openmode mode = std::ios_base::in);
-    void open_output_stream(const fs::path& path, std::ios_base::openmode mode = std::ios_base::out);
+    void open_output_stream(const fs::path &path, std::ios_base::openmode mode = std::ios_base::out);
     void open_output_stream(const char *path, std::ios_base::openmode mode = std::ios_base::out);
 
     void close_input_stream();
     void close_output_stream();
-    
+
     const bool access_same_file() const;
     const bool input_stream_ok() const;
     const bool output_stream_ok() const;

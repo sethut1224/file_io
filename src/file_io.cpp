@@ -57,6 +57,7 @@ void FileIO::read(std::string &buf)
 {   
     if(access_same_file())
     {
+        std::cout<<"both streams access to same file, close output stream to read file!"<<std::endl;
         close_output_stream();
     }
     #ifdef READ_LINE_BY_LINE

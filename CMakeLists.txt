@@ -9,7 +9,6 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 add_library(filesystem_utils
 src/filesystem_utils)
 
-
 add_executable(file_io
 src/file_io.cpp
 src/main.cpp)

@@ -1,6 +1,7 @@
 #파일 설명
 build
     - 빌드 결과물이 저장되는 디렉토리, 빌드 수행시 file_io 실행파일 생성
+    
 include
     - file_io.hpp
         - ifstream, ofstream 을 통해 file read, write 를 수행할 수 있는 FileIO 클래스 선언부
@@ -21,9 +22,8 @@ text_file1.txt
 
 
 #사용 방법
-
 src/main.cpp
-    - #define 으로 정의된 TEXT_FILE1, TEXT_FILE2 경로 설정
+    - #define 으로 정의된 TEXT_FILE1, TEXT_FILE2 경로 설정!!
 
 $ cd build
 $ make clean
